@@ -12,12 +12,12 @@ h1, h2, h3, h4, h5, p {
     margin: 0;
     padding: 0;
 }
-.img{
+img{
     display: block;
     max-width: 100%;
     height: auto;
 }
-.address {
+address {
     font-style: normal;
 }
 a {
@@ -75,10 +75,10 @@ span {
     
 }
 .header-list {
-    margin-left: 77px;
-}
-.header_list {
     margin-left: 76px;
+}
+.header-menu:not(:first-child) {
+    margin-left: 40px;
 }
     
 .header_item {
@@ -153,8 +153,8 @@ span {
 .btn {
     font-family: "Roboto", sans-serif;
     display: block;
-    width: 169px;
-    height: 56px;
+    min-width: 169px;
+    padding: 16px 32px;
     background-color: var(--button-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -163,7 +163,8 @@ span {
     font-size: 16px;
     color: var(--white-text);
     line-height: 1.5;
-    margin: 48px auto;
+    margin: 0 auto;
+    margin-top: 48px;
     cursor: pointer;
     letter-spacing: 0.04em
 }
@@ -196,6 +197,9 @@ span {
 .advantages_list_item {
     width: 264px;
     margin-left: 24px;
+}
+.advantages_list_item:first-child {
+    margin-left: 0;
 }
 .advantages_list_head {
     font-weight: 500;
@@ -240,7 +244,7 @@ span {
 .our_team {
     padding-top: 120px;
     padding-bottom: 120px;
-    background-color: var(--cloud);
+    background-color: #f4f4fd;
 }
 
 .our_team_head {
@@ -255,19 +259,18 @@ span {
 
 .our_team_cards {
     text-align: center;
+    display: flex;
     
 }
 .our_team_item {
-    display: inline-block;
     background: #FFFFFF;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
 }
 .our_team_item:nth-last-child(-n +3) {
-    margin-left: 20px;
+    margin-left: 24px;
 }
 .our_team_name {
-    margin-top: 32px;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -277,7 +280,6 @@ span {
 }
 .our_team_position {
     margin-top: 8px;
-    margin-bottom: 32px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
@@ -285,9 +287,12 @@ span {
     color: var(--text)
     
 }
+.our-team-footer {
+    padding: 32px 16px;
+}
 .studio-footer{
     background-color: var(--dark);
-    padding: 100px;
+    padding: 100px 0;
 }
 .footer-span {
     color: #f4f4fd;
@@ -303,18 +308,18 @@ span {
     letter-spacing: 0.02em;
 }
 .portfolio {
-    padding: 96px;
+    padding-top: 96px;
+    padding-bottom: 120px;
 }
 .portfolio-btn-list {
-   
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
-.portfolio-btn-list-item {
-    display: inline-block;
+.portfolio-btn-list-item:not(:first-child) {
+    margin-left: 24px;
 }
 .portfolio-btn {
     font-family: "Roboto", sans-serif;
-    margin-left: 24px;
     padding: 12px 24px;
     background: var(--cloud);
     border: 1px solid var(--accent);
@@ -335,22 +340,24 @@ span {
 
 }
 .portfolio-card {
-    text-align: center;
+    margin-top: 72px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px 24px;
+
     
 }
 .portfolio-card-item {
-    margin-top: 46px;
-    display: inline-block;
-    margin-left: 17px;
+    display: flex;
     background: #FFFFFF;
-    border: 1px solid var(--accent);
 }
-.portfolio-card-item:nth-child(3n + 1) {
-    margin-left: 0;
+.portfolio-card-footer {
+    border: 1px solid var(--accent);
+    padding: 32px 16px;
+    border-top: none;
 }
 
 .portfolio-card-head {
-    margin-top: 32px;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -360,14 +367,9 @@ span {
 }
 .potfolio-card-txt {
     margin-top: 8px;
-    margin-bottom: 32px;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color:  var(--text);
 }
 
-.portfolio-card-head, .potfolio-card-txt {
-    margin-left: 16px;
-    text-align-last: left;
-}
